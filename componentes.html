@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Componentes Pneumáticos</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="shortcut icon" href="./favicon-festo.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <nav class="topbar">
+        <div class="logo">
+
+            <img src="./logo-senai.png" alt="Senai">
+
+            <span>FESTO 4</span>
+
+        </div>
+
+        <div class="menu">
+            <a href="./index.html">Início</a>
+            <a href="./indice.html">Índice</a>
+            <a href="#">Componentes</a>
+            <a href="./esp32.html">ESP 32</a>
+            <a href="./programacao.html">Programação</a>
+            <a href="./comunicacaoWeb.html">Comunicação WEB</a>
+            <a href="./creditos.html">Créditos</a>
+        </div>
+    </nav>
+
+    <header class="banner">
+        <h1>COMPONENTES PNEUMÁTICOS</h1>
+        <div class="linha"></div>
+    </header>
+
+    <section class="componentes">
+
+        <h2>Componentes Pneumáticos e Controle com ESP32</h2>
+
+        <div class="cards-grid">
+
+            <!-- CILINDRO -->
+            <div class="card">
+                <img src="./cilindro.jpg" class="card-img">
+                <h3>Cilindro Pneumático</h3>
+                <p><strong>Função:</strong> Atuador responsável por converter ar comprimido em movimento linear.</p>
+                <p><strong>Características:</strong> Modelo compacto (16 mm x 10 mm), ideal para movimentos curtos e
+                    precisos.</p>
+                <p><strong>Aplicação com ESP32:</strong> Acionado por válvulas controladas via relé ou transistor ligado
+                    ao ESP32.</p>
+            </div>
+
+            <!-- SENSOR -->
+            <div class="card">
+                <img src="./sensor.jpg" class="card-img">
+                <h3>Sensor de Fibra Óptica</h3>
+                <p><strong>Função:</strong> Detectar presença de objetos com alta precisão.</p>
+                <p><strong>Características:</strong> Utiliza feixe de luz, imune a interferências elétricas.</p>
+                <p><strong>Aplicação com ESP32:</strong> Envia sinal digital para GPIO, permitindo leitura direta no
+                    código.</p>
+            </div>
+
+            <!-- VALVULA SOLENOIDE -->
+            <div class="card">
+                <img src="./valvula.jpg" class="card-img">
+                <h3>Válvula Solenoide</h3>
+                <p><strong>Função:</strong> Controlar fluxo de ar comprimido.</p>
+                <p><strong>Características:</strong> Acionamento elétrico, retorno automático.</p>
+                <p><strong>Aplicação com ESP32:</strong> Controlada via módulo relé ou transistor (NPN/MOSFET).</p>
+            </div>
+
+            <!-- MANIFOLD -->
+            <div class="card">
+                <img src="./manifold.jpg" class="card-img">
+                <h3>Conjunto de Válvulas (Manifold)</h3>
+                <p><strong>Função:</strong> Centralizar controle de múltiplos atuadores.</p>
+                <p><strong>Características:</strong> Reduz fiação e otimiza espaço.</p>
+                <p><strong>Aplicação com ESP32:</strong> Cada válvula pode ser acionada por uma saída digital.</p>
+            </div>
+
+            <!-- FILTRO -->
+            <div class="card">
+                <img src="./filtro.jpg" class="card-img">
+                <h3>Filtro Regulador de Pressão</h3>
+                <p><strong>Função:</strong> Regular pressão e filtrar impurezas do ar.</p>
+                <p><strong>Características:</strong> Protege todo o sistema pneumático.</p>
+                <p><strong>Aplicação:</strong> Essencial para garantir funcionamento estável dos atuadores.</p>
+            </div>
+
+            <!-- CONVERSOR -->
+            <div class="card">
+                <img src="./conversor.jpg" class="card-img">
+                <h3>Conversor de Sinais</h3>
+                <p><strong>Função:</strong> Adaptar sinais elétricos entre dispositivos.</p>
+                <p><strong>Características:</strong> Conversão analógico/digital ou níveis de tensão.</p>
+                <p><strong>Aplicação com ESP32:</strong> Usado para compatibilizar sensores industriais (24V → 3.3V).
+                </p>
+            </div>
+
+            <!-- ESP32 -->
+            <div class="card">
+                <img src="./esp32.jpg" class="card-img">
+                <h3>ESP32</h3>
+                <p><strong>Função:</strong> Microcontrolador responsável pelo controle do sistema.</p>
+                <p><strong>Características:</strong> Wi-Fi, Bluetooth, múltiplos GPIOs, baixo custo.</p>
+                <p><strong>Aplicação:</strong> Substitui o CLP no controle da bancada, executando lógica e automação.
+                </p>
+            </div>
+
+            <!-- PISTAO DUPLA ACAO -->
+            <div class="card">
+                <img src="./pistao.jpg" class="card-img">
+                <h3>Pistão Dupla Ação</h3>
+                <p><strong>Função:</strong> Movimento linear nos dois sentidos.</p>
+                <p><strong>Características:</strong> Controle preciso de avanço e retorno.</p>
+                <p><strong>Aplicação com ESP32:</strong> Controlado por válvula 5/2 acionada eletricamente.</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

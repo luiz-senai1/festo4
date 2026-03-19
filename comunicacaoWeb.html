@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comunicação Web - Sistema Festo</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon-festo.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- TOPO -->
+    <nav class="topbar">
+
+        <div class="logo">
+
+            <img src="./logo-senai.png" alt="Senai">
+
+            <span>FESTO 4</span>
+
+        </div>
+
+        <div class="menu">
+            <a href="./index.html">Início</a>
+            <a href="./indice.html">Índice</a>
+            <a href="./componentes.html">Componentes</a>
+            <a href="./esp32.html">ESP 32</a>
+            <a href="./programacao.html">Programação</a>
+            <a href="#">Comunicação WEB</a>
+            <a href="./creditos.html">Créditos</a>
+        </div>
+
+    </nav>
+
+    <!-- BANNER -->
+    <header class="banner">
+        <h1>COMUNICAÇÃO WEB</h1>
+        <div class="linha"></div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="intro">
+
+        <div class="texto">
+
+            <p>
+                Para permitir o monitoramento do sistema em tempo real, foi implementada
+                uma comunicação web utilizando o próprio <strong>ESP32 como servidor</strong>.
+            </p>
+
+            <p>
+                Isso possibilita acessar informações do processo diretamente pelo navegador,
+                sem necessidade de softwares adicionais.
+            </p>
+
+            <p>
+                A conexão é feita via <strong>Wi-Fi</strong>, onde o ESP32 se conecta a uma rede
+                e disponibiliza páginas HTML para visualização dos dados.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="componentes">
+
+        <h2>Como funciona</h2>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <h3>📶 Conexão Wi-Fi</h3>
+                <p>
+                    O ESP32 se conecta a uma rede sem fio, permitindo acesso remoto ao sistema.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Servidor Web</h3>
+                <p>
+                    Foi criado um servidor interno que responde requisições feitas pelo navegador.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📄 Páginas HTML</h3>
+                <p>
+                    O sistema envia páginas como índice, componentes e dados em tempo real.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔄 Atualização</h3>
+                <p>
+                    Os dados são atualizados dinamicamente, permitindo acompanhar o processo ao vivo.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPLICAÇÃO -->
+    <section class="intro">
+
+        <div class="texto">
+
+            <h2 style="margin-bottom:10px;">Estrutura da Comunicação</h2>
+
+            <p>
+                O ESP32 atua como um <strong>servidor HTTP</strong>, respondendo a diferentes rotas
+                (acessos) feitas pelo navegador.
+            </p>
+
+            <p>
+                Cada rota retorna uma página ou informação específica, como:
+                <strong>tela inicial, entradas/saídas e dados do sistema</strong>.
+            </p>
+
+            <p>
+                Também foi criada uma rota dedicada para envio de dados em formato simples,
+                permitindo atualização contínua das informações exibidas.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- JUSTIFICATIVA -->
+    <section class="componentes">
+
+        <h2>Por que utilizar comunicação web?</h2>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <h3>📱 Acesso Fácil</h3>
+                <p>
+                    Pode ser acessado por qualquer dispositivo com navegador.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Tempo Real</h3>
+                <p>
+                    Permite acompanhar o funcionamento do sistema instantaneamente.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔧 Simplicidade</h3>
+                <p>
+                    Dispensa softwares externos, utilizando apenas o navegador.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Profissional</h3>
+                <p>
+                    Aproxima o projeto de aplicações reais da indústria.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

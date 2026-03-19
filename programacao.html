@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programação - Sistema Festo</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon-festo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- TOPO -->
+    <nav class="topbar">
+
+        <div class="logo">
+
+            <img src="./logo-senai.png" alt="Senai">
+
+            <span>FESTO 4</span>
+
+        </div>
+
+        <div class="menu">
+            <a href="./index.html">Início</a>
+            <a href="./indice.html">Índice</a>
+            <a href="./componentes.html">Componentes</a>
+            <a href="./esp32.html">ESP 32</a>
+            <a href="#">Programação</a>
+            <a href="./comunicacaoWeb.html">Comunicação WEB</a>
+            <a href="./creditos.html">Créditos</a>
+        </div>
+
+    </nav>
+
+    <!-- BANNER -->
+    <header class="banner">
+        <h1>PROGRAMAÇÃO</h1>
+        <div class="linha"></div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="intro">
+
+        <div class="texto">
+
+            <p>
+                A programação do sistema foi desenvolvida utilizando o <strong>ESP32</strong>,
+                com o objetivo de automatizar completamente o processo da bancada FESTO.
+            </p>
+
+            <p>
+                O sistema realiza a <strong>leitura de sensores</strong>, identifica o tipo de peça
+                e controla <strong>atuadores pneumáticos</strong> de forma automática e sequencial.
+            </p>
+
+            <p>
+                Além disso, foi implementada uma <strong>comunicação via Wi-Fi</strong>,
+                permitindo o acesso a um painel web para <strong>monitoramento em tempo real</strong>.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- DIVISOR -->
+    <div style="width:80%; height:1px; background:rgba(255,255,255,0.1); margin:40px auto;"></div>
+
+    <!-- LÓGICA -->
+    <section class="componentes">
+
+        <h2>Lógica do Sistema</h2>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <h3>🔎 Sensores</h3>
+                <p>
+                    Responsáveis por detectar presença, posição e tipo de material da peça.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Atuadores</h3>
+                <p>
+                    Executam ações físicas como movimentação, avanço e separação.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔁 Sequência</h3>
+                <p>
+                    O processo segue uma ordem definida, garantindo funcionamento correto.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Web</h3>
+                <p>
+                    Permite visualizar dados do sistema em tempo real através do navegador.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MÁQUINA DE ESTADOS -->
+    <section class="intro">
+        <div class="card" style="
+        max-width: 800px;
+        width: 100%;
+        padding: 30px;
+        border: 1px solid rgba(56,189,248,0.4);
+        margin: 40px auto;
+        ">
+
+            <h2 style="margin-bottom:15px;">🧠 Máquina de Estados</h2>
+
+            <p style="margin-bottom:15px; font-size:15px;">
+                O sistema foi desenvolvido utilizando uma <strong>máquina de estados (FSM)</strong>,
+                dividindo todo o processo em etapas bem definidas.
+            </p>
+
+            <p style="margin-bottom:15px;">
+                Cada estado representa uma fase do funcionamento, como:
+                <strong>espera da peça, identificação, movimentação e separação</strong>.
+            </p>
+
+            <p style="margin-bottom:15px;">
+                Essa lógica garante que cada ação aconteça no momento correto,
+                evitando conflitos entre sensores e atuadores.
+            </p>
+
+            <p>
+                Com isso, o sistema se torna mais <strong>organizado, seguro e fácil de manter</strong>,
+                além de facilitar futuras melhorias.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- DIVISOR -->
+    <div style="width:80%; height:1px; background:rgba(255,255,255,0.1); margin:40px auto;"></div>
+
+
+    <!-- JUSTIFICATIVA -->
+    <section class="componentes">
+
+        <h2>Por que foi feito assim?</h2>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <h3>📁 Organização</h3>
+                <p>
+                    Facilita o entendimento e manutenção do sistema.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🛡️ Segurança</h3>
+                <p>
+                    Evita que várias ações ocorram ao mesmo tempo.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Precisão</h3>
+                <p>
+                    Permite saber exatamente em qual etapa o sistema está.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Evolução</h3>
+                <p>
+                    Facilita adicionar melhorias no futuro.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ESP32 e Conexões</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="./favicon-festo.png" type="image/x-icon">
+
+</head>
+
+<body class="esp32">
+
+    <nav class="topbar">
+        <div class="logo">
+
+            <img src="./logo-senai.png" alt="Senai">
+
+            <span>FESTO 4</span>
+
+        </div>
+
+        <div class="menu">
+            <a href="./index.html">Início</a>
+            <a href="./indice.html">Índice</a>
+            <a href="./componentes.html">Componentes</a>
+            <a href="#">ESP 32</a>
+            <a href="./programacao.html">Programação</a>
+            <a href="./comunicacaoWeb.html">Comunicação WEB</a>
+            <a href="./creditos.html">Créditos</a>
+        </div>
+    </nav>
+
+    <header class="banner">
+        <h1>ESP32 & CONEXÕES</h1>
+        <div class="linha"></div>
+    </header>
+
+    <section class="intro">
+
+        <div class="topicos-grid">
+
+            <!-- ESP32 -->
+            <div class="topico-card">
+                <h2>ESP32</h2>
+
+                <p>
+                    O ESP32 é o microcontrolador responsável por controlar todo o sistema da FESTO 4.
+                    Ele substitui um CLP tradicional, executando a lógica de automação industrial.
+                </p>
+
+                <p>
+                    No sistema, ele realiza leitura de sensores, controle de atuadores e hospeda
+                    um servidor web para monitoramento.
+                </p>
+
+            </div>
+
+            <!-- CONEXÕES -->
+            <div class="topico-card">
+                <h2>Conexões</h2>
+
+                <p>
+                    As conexões do sistema são feitas através dos pinos GPIO do ESP32, que permitem
+                    a comunicação com sensores e atuadores.
+                </p>
+
+                <p>
+                    Cada componente está ligado a um pino específico, garantindo controle individual
+                    e organização do sistema.
+                </p>
+
+            </div>
+
+            <!-- LÓGICA -->
+            <div class="topico-card">
+                <h2>Lógica</h2>
+
+                <p>
+                    O sistema segue uma sequência baseada em eventos. Primeiro detecta a peça,
+                    depois analisa posição e material.
+                </p>
+
+                <p>
+                    Com base nisso, o ESP32 decide qual atuador será acionado, utilizando
+                    máquina de estados (FSM).
+                </p>
+
+            </div>
+
+            <!-- IO -->
+            <div class="topico-card">
+                <h2>I/O (Entradas e Saídas)</h2>
+
+                <p>
+                    Entradas são sensores conectados aos GPIOs que enviam sinais digitais.
+                </p>
+
+                <p>
+                    Saídas controlam dispositivos como esteira e válvulas, acionadas via relés.
+                </p>
+
+                <p>
+                    O ESP32 faz a integração entre o sistema físico e a lógica digital.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="componentes">
+
+        <h2>Mapeamento de Conexões (GPIO)</h2>
+
+        <div class="cards-grid">
+
+            <!-- SENSORES -->
+
+            <div class="card">
+                <img src="./sensor-entrada.jpeg" class="card-img">
+                <h3>Sensor de Presença</h3>
+                <p><strong>GPIO:</strong> 36</p>
+                <p>Detecta a chegada da peça</p>
+            </div>
+
+            <div class="card">
+                <img src="./Trava.jpeg" class="card-img">
+                <h3>Trava</h3>
+                <p><strong>GPIO:</strong> 33</p>
+                <p>Usada para travar a peça para o atuador puxa-la</p>
+            </div>
+
+            <div class="card">
+                <img src="./Sensor_Indutivo.jpeg" class="card-img">
+                <h3>Sensor Indutivo (Metal)</h3>
+                <p><strong>GPIO:</strong> 39</p>
+                <p>Diferencia metal e plástico</p>
+            </div>
+
+            <div class="card">
+                <img src="./Pistao.jpeg" class="card-img">
+                <h3>Pino Verificador</h3>
+                <p><strong>GPIO:</strong> 32</p>
+                <p>Verifica se a peça esta virada para cima ou para baixo</p>
+            </div>
+
+            <!-- ATUADORES -->
+
+            <div class="card">
+                <img src="./Esteira.jpeg" class="card-img">
+                <h3>Motor da Esteira</h3>
+                <p><strong>GPIO:</strong> 22</p>
+                <p>Movimenta a peça</p>
+            </div>
+
+            <div class="card">
+                <img src="./Atuador.jpeg" class="card-img">
+                <h3>Cilindro Pneumático</h3>
+                <p><strong>GPIO:</strong> 19</p>
+                <p>Avanço e recuo do cilindro</p>
+            </div>
+
+            <div class="card">
+                <img src="./SistemaInspecao.jpeg" class="card-img">
+                <h3>Sistema de Inspeção</h3>
+                <p><strong>GPIO:</strong> 18</p>
+                <p>Ativa sistema de leitura</p>
+            </div>
+
+            <div class="card">
+                <img src="./Separador.jpeg" class="card-img">
+                <h3>Separador</h3>
+                <p><strong>GPIO:</strong> 21</p>
+                <p>Direciona peça</p>
+            </div>
+
+            <div class="card">
+                <img src="./Saida.jpeg" class="card-img">
+                <h3>Saída Auxiliar / Reserva</h3>
+                <p><strong>GPIO:</strong> 23</p>
+                <p>Controle adicional</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
