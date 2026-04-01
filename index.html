@@ -22,15 +22,18 @@
     <nav class="topbar">
 
         <div class="logo">
-
             <img src="logo-senai.png" alt="Senai">
-
             <span>FESTO 4</span>
-
         </div>
-
-        <div class="menu">
-            <a href="#">Início</a>
+    
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <div class="menu" id="menu">
+            <a href="./index.html">Início</a>
             <a href="./indice.html">Índice</a>
             <a href="./componentes.html">Componentes</a>
             <a href="./esp32.html">ESP 32</a>
@@ -38,7 +41,7 @@
             <a href="./comunicacaoWeb.html">Comunicação WEB</a>
             <a href="./creditos.html">Créditos</a>
         </div>
-
+    
     </nav>
 
     <!-- BANNER -->
@@ -85,9 +88,20 @@
 
     <script>
         function toggleMenu() {
-            let menu = document.getElementById("menuLateral")
-            menu.classList.toggle("ativo")
+            document.getElementById("menu").classList.toggle("ativo");
         }
+    
+        document.addEventListener("click", function(e) {
+            const menu = document.getElementById("menu");
+            const toggle = document.querySelector(".menu-toggle");
+    
+            if (!menu || !toggle) return;
+    
+            if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.remove("ativo");
+            }
+        });
+    
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/service-worker.js")
                 .then(() => console.log("PWA ativa"))

@@ -18,23 +18,28 @@
 <body class="esp32">
 
     <nav class="topbar">
+
         <div class="logo">
-
             <img src="logo-senai.png" alt="Senai">
-
             <span>FESTO 4</span>
-
         </div>
-
-        <div class="menu">
+    
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <div class="menu" id="menu">
             <a href="./index.html">Início</a>
             <a href="./indice.html">Índice</a>
             <a href="./componentes.html">Componentes</a>
-            <a href="#">ESP 32</a>
+            <a href="./esp32.html">ESP 32</a>
             <a href="./programacao.html">Programação</a>
             <a href="./comunicacaoWeb.html">Comunicação WEB</a>
             <a href="./creditos.html">Créditos</a>
         </div>
+    
     </nav>
 
     <header class="banner">
@@ -126,28 +131,28 @@
 
             <div class="card">
                 <img src="sensor-entrada.jpeg" class="card-img">
-                <h3>Sensor de Presença</h3>
+                <h3>Sensor Óptico 1 (Entrada)</h3>
                 <p><strong>GPIO:</strong> 36</p>
                 <p>Detecta a chegada da peça</p>
             </div>
 
             <div class="card">
-                <img src="Trava.jpeg" class="card-img">
-                <h3>Trava</h3>
+                <img src="./SistemaInspecao.jpeg" class="card-img">
+                <h3>Sensor Óptico 2 (Entrada)</h3>
                 <p><strong>GPIO:</strong> 33</p>
                 <p>Usada para travar a peça para o atuador puxa-la</p>
             </div>
 
             <div class="card">
                 <img src="Sensor_Indutivo.jpeg" class="card-img">
-                <h3>Sensor Indutivo (Metal)</h3>
+                <h3>Sensor Indutivo (Metal, Entrada)</h3>
                 <p><strong>GPIO:</strong> 39</p>
                 <p>Diferencia metal e plástico</p>
             </div>
 
             <div class="card">
                 <img src="Pistao.jpeg" class="card-img">
-                <h3>Pino Verificador</h3>
+                <h3>Pino Verificador de posição (Entrada)</h3>
                 <p><strong>GPIO:</strong> 32</p>
                 <p>Verifica se a peça esta virada para cima ou para baixo</p>
             </div>
@@ -156,28 +161,28 @@
 
             <div class="card">
                 <img src="Esteira.jpeg" class="card-img">
-                <h3>Motor da Esteira</h3>
+                <h3>Esteira (Saída)</h3>
                 <p><strong>GPIO:</strong> 22</p>
                 <p>Movimenta a peça</p>
             </div>
 
             <div class="card">
                 <img src="Atuador.jpeg" class="card-img">
-                <h3>Cilindro Pneumático</h3>
+                <h3>Atuador Linear (Saída)</h3>
                 <p><strong>GPIO:</strong> 19</p>
                 <p>Avanço e recuo do cilindro</p>
             </div>
 
             <div class="card">
-                <img src="SistemaInspecao.jpeg" class="card-img">
-                <h3>Sistema de Inspeção</h3>
+                <img src="Trava.jpeg" class="card-img">
+                <h3>Trava (Saída)</h3>
                 <p><strong>GPIO:</strong> 18</p>
-                <p>Ativa sistema de leitura</p>
+                <p>Ativa trava do sistema</p>
             </div>
 
             <div class="card">
                 <img src="Separador.jpeg" class="card-img">
-                <h3>Separador</h3>
+                <h3>Separador (Saída)</h3>
                 <p><strong>GPIO:</strong> 21</p>
                 <p>Direciona peça</p>
             </div>
@@ -194,6 +199,21 @@
     </section>
 
     <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("ativo");
+        }
+    
+        document.addEventListener("click", function(e) {
+            const menu = document.getElementById("menu");
+            const toggle = document.querySelector(".menu-toggle");
+    
+            if (!menu || !toggle) return;
+    
+            if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.remove("ativo");
+            }
+        });
+    
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/service-worker.js")
                 .then(() => console.log("PWA ativa"))
