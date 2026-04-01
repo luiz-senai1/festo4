@@ -8,6 +8,8 @@
 
     <title>Créditos - Sistema Festo</title>
 
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0d6efd">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon-festo.png" type="image/x-icon">
 
@@ -58,7 +60,7 @@
                 programação, automação industrial e sistemas embarcados, por meio da integração entre
                 hardware e software.
             </p>
-        
+
         </div>
 
         <h2 class="titulo-participantes">Participantes</h2>
@@ -90,6 +92,13 @@
 
     </section>
 
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js")
+                .then(() => console.log("PWA ativa"))
+                .catch(err => console.log(err));
+        }
+    </script>
 </body>
 
 </html>

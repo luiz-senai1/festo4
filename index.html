@@ -9,7 +9,8 @@
     <title>Festo 4 - Introdução</title>
 
     <link rel="stylesheet" href="style.css">
-
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0d6efd">
     <link rel="shortcut icon" href="favicon-festo.png" type="image/x-icon">
 
 
@@ -82,12 +83,17 @@
 
     </section>
 
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menuLateral")
+            menu.classList.toggle("ativo")
+        }
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js")
+                .then(() => console.log("PWA ativa"))
+                .catch(err => console.log(err));
+        }
+    </script>
 </body>
-<script>
-    function toggleMenu() {
-        let menu = document.getElementById("menuLateral")
-        menu.classList.toggle("ativo")
-    }
-</script>
 
 </html>
